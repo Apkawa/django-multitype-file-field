@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-import ImageFile
 import mimetypes
 
 from django.db import models
+from django.core.files.images import ImageFile
 from django.db.models.fields.files import FieldFile
 
-from multitype_file_field.forms import MultiTypeFormField
+from .forms import MultiTypeFormField
+from .utils import is_archive
 
 
 class MultiTypeFileField(models.FileField):
@@ -14,17 +15,16 @@ class MultiTypeFileField(models.FileField):
         'image': ImageFile,
     }
 
+    def __init__(self, attr_classes=None, get_attr_class=None, *args, **kwargs):
+        if attr_classes:
+            self.attr_classes = attr_classes
+        if get_attr_class:
+            self.get_attr_class = get_attr_class
+
+        super(MultiTypeFileField, self).__init__(*args, **kwargs)
+
     def get_attr_reverse_map(self):
         return {cls: key for key, cls in self.attr_classes.items()}
-
-    @staticmethod
-    def is_archive(mime_type):
-        archive_types = ['.tar', '.tar.bz2', '.tar.gz', '.tgz', '.tz2', '.zip']
-        for ext in archive_types:
-            t_mime, _ = mimetypes.guess_type('t' + ext)
-            if t_mime == mime_type:
-                return True
-        return False
 
     def get_attr_keys(self, instance, field, file_name):
         keys = []
@@ -34,7 +34,7 @@ class MultiTypeFileField(models.FileField):
         mime, encoding = mimetypes.guess_type(file_name)
         if mime:
             p_type, s_type = mime.split('/')
-            if self.is_archive(mime):
+            if is_archive(mime):
                 p_type = 'archive'
 
             keys = [mime, p_type]

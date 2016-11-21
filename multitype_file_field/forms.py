@@ -2,7 +2,11 @@
 import mimetypes
 
 from django import forms
-from easy_thumbnails.widgets import ImageClearableFileInput
+
+try:
+    from easy_thumbnails.widgets import ImageClearableFileInput as _widget
+except ImportError:
+    from django.forms.widgets import ClearableFileInput as _widget
 
 
 class MultiTypeFormField(forms.ImageField):
@@ -14,7 +18,7 @@ class MultiTypeFormField(forms.ImageField):
             if mime:
                 p_type, s_type = mime.split('/')
                 if p_type == 'image':
-                    return ImageClearableFileInput()
+                    return _widget
         return self._widget
 
     widget = property(_get_widget)
