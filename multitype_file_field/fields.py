@@ -2,8 +2,8 @@
 import mimetypes
 
 from django.db import models
-from django.core.files.images import ImageFile
 from django.db.models.fields.files import FieldFile
+from django.db.models.fields.files import ImageFieldFile
 
 from .forms import MultiTypeFormField
 from .utils import is_archive
@@ -12,7 +12,7 @@ from .utils import is_archive
 class MultiTypeFileField(models.FileField):
     attr_classes = {
         None: FieldFile,
-        'image': ImageFile,
+        'image': ImageFieldFile,
     }
 
     def __init__(self, attr_classes=None, get_attr_class=None, *args, **kwargs):

@@ -27,7 +27,7 @@ setup(
     author="Apkawa",
     author_email='apkawa@gmail.com',
     packages=[package for package in find_packages() if package.startswith(project_name)],
-    install_requires=['six', 'openpyxl==2.4.0', 'babel>=2.3.4'],
+    install_requires=['six'],
     zip_safe=False,
     include_package_data=True,
     classifiers=[
