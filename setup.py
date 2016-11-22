@@ -9,7 +9,7 @@ App for Django featuring improved form base classes.
 
 project_name = 'multitype_file_field'
 
-version = '0.0.1'
+version = '0.0.2'
 
 ROOT = os.path.dirname(__file__)
 
