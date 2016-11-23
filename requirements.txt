@@ -1,0 +1,5 @@
+django>=1.10
+pytest
+pytest-django
+pytest-pythonpath
+mock

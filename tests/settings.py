@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
 
     'multitype_file_field',
-    'tests.apps.TestConfig',
+    'tests',
 ]
 
 MIDDLEWARE_CLASSES = (
