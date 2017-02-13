@@ -13,17 +13,22 @@ class MultiTypeFileField(models.FileField):
         'image': models.ImageField,
     }
 
-    def __init__(self, fields=None, get_field=None, *args, **kwargs):
+    def __init__(self, verbose_name=None, fields=None, get_field=None, *args, **kwargs):
 
-        super(MultiTypeFileField, self).__init__(*args, **kwargs)
+        super(MultiTypeFileField, self).__init__(verbose_name, *args, **kwargs)
 
         self.field_map = fields
         if not self.field_map:
             self.field_map = {key: field_class(*args, **kwargs) for key, field_class in self.field_classes.items()}
         else:
             for k, field in self.field_map.items():
+                field_kwargs = dict(kwargs)
+                if isinstance(field, tuple):
+                    field, extra_kwargs = field
+                    field_kwargs.update(extra_kwargs)
+
                 if inspect.isclass(field):
-                    self.field_map[k] = field(*args, **kwargs)
+                    self.field_map[k] = field(*args, **field_kwargs)
 
         self.field_map.setdefault(None, models.FileField(*args, **kwargs))
 
