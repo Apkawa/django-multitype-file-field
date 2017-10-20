@@ -6,5 +6,8 @@ python:
     - "3.4"
     - "3.5"
     - "3.6"
-install: pip install tox-travis
+install: pip install tox-travis python-coveralls codecov
 script: tox
+after_success:
+  - coveralls
+  - codecov

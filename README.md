@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/Apkawa/django-multitype-file-field.svg?branch=master)](https://travis-ci.org/Apkawa/django-multitype-file-field)
+[![Coverage Status](https://coveralls.io/repos/github/Apkawa/django-multitype-file-field/badge.svg)](https://coveralls.io/github/Apkawa/django-multitype-file-field)
+[![codecov](https://codecov.io/gh/Apkawa/django-multitype-file-field/branch/master/graph/badge.svg)](https://codecov.io/gh/Apkawa/django-multitype-file-field)
 [![Requirements Status](https://requires.io/github/Apkawa/django-multitype-file-field/requirements.svg?branch=master)](https://requires.io/github/Apkawa/django-multitype-file-field/requirements/?branch=master)
 [![PyPI](https://img.shields.io/pypi/pyversions/django-multitype-file-field.svg)]()
 
