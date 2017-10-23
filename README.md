@@ -21,9 +21,8 @@ pip install -e git+https://github.com/Apkawa/django-multitype-file-field.git#egg
 
 ## Django and python version
 
-* python-2.7 - django>=1.4,<=1.11
-* python-3.3 - django>=1.6,<=1.8
-* python-3.4 - django>=1.6,<=1.11
+* python-2.7 - django>=1.8,<=1.11
+* python-3.4 - django>=1.8,<=1.11
 * python-3.5 - django>=1.8,<=1.11
 * python-3.6 - django>=1.11
 

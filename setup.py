@@ -7,7 +7,7 @@ __doc__ = """App for Django featuring improved form base classes."""
 
 project_name = 'django-multitype-file-field'
 
-version = '0.0.4'
+version = '0.0.5'
 
 ROOT = os.path.dirname(__file__)
 
