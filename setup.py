@@ -6,6 +6,7 @@ from setuptools import setup, find_packages
 __doc__ = """App for Django featuring improved form base classes."""
 
 project_name = 'django-multitype-file-field'
+app_name = 'multitype_file_field'
 
 version = '0.0.5'
 
@@ -15,12 +16,13 @@ ROOT = os.path.dirname(__file__)
 def read(fname):
     return open(os.path.join(ROOT, fname)).read()
 
+
 try:
     import pypandoc
+
     long_description = pypandoc.convert('README.md', 'rst')
 except ImportError:
     long_description = read('README.md')
-
 
 setup(
     name=project_name,
@@ -30,7 +32,7 @@ setup(
     url="https://github.com/Apkawa/django-multitype-file-field",
     author="Apkawa",
     author_email='apkawa@gmail.com',
-    packages=[package for package in find_packages() if package.startswith(project_name)],
+    packages=[package for package in find_packages() if package.startswith(app_name)],
     install_requires=['six'],
     zip_safe=False,
     include_package_data=True,
