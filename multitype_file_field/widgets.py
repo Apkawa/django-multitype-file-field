@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 import inspect
-import mimetypes
-
-from django.forms.widgets import ClearableFileInput
 from django.contrib.admin.widgets import AdminFileWidget
-
+from django.forms.widgets import ClearableFileInput
 
 try:
     from easy_thumbnails.widgets import ImageClearableFileInput
@@ -13,7 +10,6 @@ try:
 except ImportError:
     ImageClearableFileInput = ClearableFileInput
     AdminImageWidget = AdminFileWidget
-
 
 
 class MultiTypeInputMixin(object):
@@ -49,4 +45,3 @@ class AdminMultiTypeClearableFileInput(MultiTypeInputMixin, AdminFileWidget):
     widget_classes = {
         'image': AdminImageWidget
     }
-

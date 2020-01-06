@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-import os
 import mock
+import os
+from django.conf import settings
+from django.core.files.base import ContentFile
 from unittest import TestCase
 
 from multitype_file_field import MultiTypeFileField
-
-from django.conf import settings
-from django.core.files.base import ContentFile
-
 from .models import TestModel
 
 UPLOAD_TO = 'multitype'

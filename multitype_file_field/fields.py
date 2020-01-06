@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import inspect
 import mimetypes
-
+from django.contrib.admin import options
 from django.db import models
 
 from .utils import is_archive
@@ -19,7 +19,8 @@ class MultiTypeFileField(models.FileField):
 
         self.field_map = fields
         if not self.field_map:
-            self.field_map = {key: field_class(*args, **kwargs) for key, field_class in self.field_classes.items()}
+            self.field_map = {key: field_class(*args, **kwargs) for key, field_class in
+                              self.field_classes.items()}
         else:
             for k, field in self.field_map.items():
                 field_kwargs = dict(kwargs)
@@ -94,6 +95,6 @@ class MultiTypeFileField(models.FileField):
         return super(MultiTypeFileField, self).formfield(**kwargs)
 
 
-from django.contrib.admin import options
-
-options.FORMFIELD_FOR_DBFIELD_DEFAULTS[MultiTypeFileField] = {'widget': AdminMultiTypeClearableFileInput}
+options.FORMFIELD_FOR_DBFIELD_DEFAULTS[MultiTypeFileField] = {
+    'widget': AdminMultiTypeClearableFileInput
+}

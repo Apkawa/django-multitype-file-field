@@ -5,8 +5,8 @@ SITE_ID = 1
 TEST_ROOT = os.path.normcase(os.path.dirname(os.path.abspath(__file__)))
 FIXTURES_ROOT = os.path.join(TEST_ROOT, 'fixtures')
 
-
-MEDIA_ROOT = os.path.join(os.path.normcase(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'media')
+MEDIA_ROOT = os.path.join(
+    os.path.normcase(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'media')
 MEDIA_URL = '/media/'
 
 DATABASE_ENGINE = 'sqlite3'
