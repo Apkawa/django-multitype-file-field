@@ -1,8 +1,7 @@
+[![ci](https://github.com/Apkawa/django-multitype-file-field/actions/workflows/ci.yml/badge.svg)](https://github.com/Apkawa/django-multitype-file-field/actions/workflows/ci.yml)
+
 [![PyPi](https://img.shields.io/pypi/v/django-multitype-file-field.svg)](https://pypi.python.org/pypi/django-multitype-file-field)
-[![Build Status](https://travis-ci.org/Apkawa/django-multitype-file-field.svg?branch=master)](https://travis-ci.org/Apkawa/django-multitype-file-field)
-[![Coverage Status](https://coveralls.io/repos/github/Apkawa/django-multitype-file-field/badge.svg)](https://coveralls.io/github/Apkawa/django-multitype-file-field)
 [![codecov](https://codecov.io/gh/Apkawa/django-multitype-file-field/branch/master/graph/badge.svg)](https://codecov.io/gh/Apkawa/django-multitype-file-field)
-[![Requirements Status](https://requires.io/github/Apkawa/django-multitype-file-field/requirements.svg?branch=master)](https://requires.io/github/Apkawa/django-multitype-file-field/requirements/?branch=master)
 [![PyPi](https://img.shields.io/pypi/pyversions/django-multitype-file-field.svg)](https://pypi.python.org/pypi/django-multitype-file-field)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
