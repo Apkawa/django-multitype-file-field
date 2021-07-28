@@ -75,7 +75,7 @@ model.file # => <FieldFile: example.txt>
 ## run example app
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ./test/manage.py migrate
 ./test/manage.py runserver
 ```
@@ -83,7 +83,7 @@ pip install -r requirements.txt
 ## run tests
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 pytest
 tox
 ```

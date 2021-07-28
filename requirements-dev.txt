@@ -1,5 +1,5 @@
 -e .
-bumpversion
+bumpversion<0.6
 wheel
 tox
 twine
