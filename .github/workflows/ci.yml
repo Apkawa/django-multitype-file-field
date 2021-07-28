@@ -82,7 +82,7 @@ jobs:
           --outdir dist/
 
       - name: Publish distribution to Test PyPI
-        if: github.ref == 'refs/heads/master' and secrets.TEST_PYPI_API_TOKEN
+        if: github.ref == 'refs/heads/master' && secrets.TEST_PYPI_API_TOKEN
         uses: pypa/gh-action-pypi-publish@master
         with:
           skip_existing: true

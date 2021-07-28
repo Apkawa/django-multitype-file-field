@@ -1,9 +1,9 @@
 [![ci](https://github.com/Apkawa/django-multitype-file-field/actions/workflows/ci.yml/badge.svg)](https://github.com/Apkawa/django-multitype-file-field/actions/workflows/ci.yml)
-
-[![PyPi](https://img.shields.io/pypi/v/django-multitype-file-field.svg)](https://pypi.python.org/pypi/django-multitype-file-field)
 [![codecov](https://codecov.io/gh/Apkawa/django-multitype-file-field/branch/master/graph/badge.svg)](https://codecov.io/gh/Apkawa/django-multitype-file-field)
-[![PyPi](https://img.shields.io/pypi/pyversions/django-multitype-file-field.svg)](https://pypi.python.org/pypi/django-multitype-file-field)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+[![PyPi ](https://img.shields.io/pypi/v/django-multitype-file-field.svg)](https://pypi.python.org/pypi/django-multitype-file-field)
+[![PyPi python versions](https://img.shields.io/pypi/pyversions/django-multitype-file-field.svg)](https://pypi.python.org/pypi/django-multitype-file-field)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Project for merging different file types, as example easy thumbnail image and unpacking archive in one field
 
